@@ -4,9 +4,12 @@ import { Link } from "react-router";
 const Header = () => {
   const links = (
     <>
-      <li><Link to="/">Home</Link></li>
-      <li><Link to="/about">About</Link></li>
-      <li><Link to="/profile">Profile</Link></li>
+      <Link to="/">
+        <li className="m-2">Home</li>
+      </Link>
+      <Link to="/about">
+        <li className="m-2">About</li>
+      </Link>
     </>
   );
   return (
@@ -41,12 +44,12 @@ const Header = () => {
         <a className="btn btn-ghost text-xl">Book Vibe</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          {links}
-        </ul>
+        <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        <Link to="/login" className="btn">Login</Link>
+        <Link to="/login" className="btn">
+          Login
+        </Link>
       </div>
     </div>
   );
